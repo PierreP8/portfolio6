@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "TeX Gyre Heros Condensed";
+  src: url("../fonts/TeXGyreHerosCondensed-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 65.88%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+  font-family: "TeX Gyre Heros Condensed", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: .7; }
+
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  padding: 2rem;
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #287c46;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.site-nav__grid { display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; }
+.site-nav__grid a { display: block; text-align: center; }
+.site-nav__grid a:last-child { text-align: right; }
+
+main { padding: 7.5rem 3rem 11.2rem; }
+.project-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8rem; }
+
+h1 {
+  margin: 0 0 2rem;
+  color: #287c46;
+  font-size: 8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+.project-meta { margin: 0 0 3rem; color: #444; font-family: Arial, sans-serif; font-size: 15px; font-style: italic; line-height: 1.5; }
+.project-intro { margin: 0 0 1rem; color: #111; font-family: Arial, sans-serif; font-size: 17px; line-height: 1.6; }
+.project-copy { margin: 0; color: #222; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; }
+
+.activation { margin-bottom: 45px; }
+.activation img { display: block; width: 100%; height: auto; }
+.activation h2 { margin: 15px 0 8px; color: #287c46; font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; letter-spacing: .03em; line-height: 1.2; }
+.activation p { margin: 0; color: #222; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5; }
+
+.site-footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  padding: 1.6rem 2rem;
+  color: #287c46;
+  font-size: 1.5rem;
+  text-align: center;
+  pointer-events: none;
+}
+.site-footer a { pointer-events: auto; }
+
+@media (max-width: 800px) {
+  .site-nav { padding: 1.5rem 1rem; font-size: 11px; }
+  main { padding: 6rem 1.5rem 7rem; }
+  .project-grid { grid-template-columns: 1fr; gap: 4rem; }
+  h1 { font-size: 5rem; }
+}

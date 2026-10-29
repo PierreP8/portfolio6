@@ -1,0 +1,59 @@
+/* Keep Cargo's titles left-aligned while centring every project card. */
+[data-id="38593796"] .page_content > .image-link,
+[data-id="38593797"] .page_content > .image-link {
+  display: block;
+  width: min(423.575px, 100%);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* The original UGG file contained a very large transparent canvas. */
+img[data-mid="252215782"],
+img[data-mid="252186946"] {
+  height: auto !important;
+  margin-top: 2rem;
+}
+
+[data-id="38593796"] .page_content > [grid-row],
+[data-id="38593797"] .page_content > [grid-row] {
+  width: min(423.575px, 100%) !important;
+  position: relative;
+  z-index: 1;
+  margin-top: -2rem !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  display: block !important;
+  min-height: 4rem;
+}
+
+[data-id="38593796"] .page_content > [grid-row] > [grid-col],
+[data-id="38593797"] .page_content > [grid-row] > [grid-col] {
+  position: absolute;
+  top: 0;
+  width: 14rem !important;
+  padding: 0 !important;
+}
+
+[data-id="38593796"] .page_content > [grid-row] > [grid-col]:first-child,
+[data-id="38593797"] .page_content > [grid-row] > [grid-col]:first-child {
+  left: 0;
+  transform: translateX(-50%);
+  text-align: left;
+  white-space: nowrap;
+}
+
+[data-id="38593796"] .page_content > [grid-row] > [grid-col]:last-child,
+[data-id="38593797"] .page_content > [grid-row] > [grid-col]:last-child,
+[data-id="38593796"] .page_content > [grid-row] > [grid-col]:last-child div,
+[data-id="38593797"] .page_content > [grid-row] > [grid-col]:last-child div {
+  text-align: right !important;
+}
+
+[data-id="38593796"] .page_content > [grid-row] > [grid-col]:last-child,
+[data-id="38593797"] .page_content > [grid-row] > [grid-col]:last-child {
+  right: 0;
+  transform: translateX(50%);
+}
+
+/* Keep the same active-link behaviour on Home. */
+a[rel="home_page"] { opacity: .35; pointer-events: none; }

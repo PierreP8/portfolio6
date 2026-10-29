@@ -1,0 +1,50 @@
+/* Reproduction of the Cargo grid used by the Home navbar. */
+.home-navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 20px;
+  color: #287c46;
+  background: rgba(255, 255, 255, .2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+.home-navbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: calc(100% + 42.1632px);
+  margin: -21.0816px;
+  padding: 10.5408px;
+}
+.home-navbar__col {
+  box-sizing: border-box;
+  width: 25%;
+  padding: 10.5408px;
+}
+.home-navbar__col--center { text-align: center; }
+.home-navbar__col--right { text-align: right; }
+.home-navbar a { color: #287c46; text-decoration: none; }
+.home-navbar__col--small a {
+  display: inline-block;
+  padding-bottom: .79056px;
+  font-family: "TeX Gyre Heros Condensed", Icons, sans-serif;
+  font-size: 15.8112px;
+  line-height: 20.5546px;
+  letter-spacing: .737856px;
+}
+.home-navbar__col:not(.home-navbar__col--small) a {
+  display: inline-block;
+  padding-bottom: .7px;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+.home-navbar a.active { opacity: .35; pointer-events: none; }

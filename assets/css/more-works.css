@@ -1,0 +1,44 @@
+body { background: #cecece; }
+.site-nav {
+  background: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.site-nav__grid a.active { opacity: .35; }
+.more-works { width: 65%; min-height: 100vh; margin: 0 auto; padding: 7.5rem 3rem 11.2rem; }
+.page-title { margin: 0 0 2.6rem; color: #287c46; font-size: 8rem; font-weight: 400; line-height: 1; }
+.work-section { width: 100%; margin: 0 0 13rem; scroll-margin-top: 8rem; }
+.work-section h2 { margin: 0 0 2.6rem; color: #287c46; font-size: 8rem; font-weight: 400; line-height: 1; text-align: center; }
+.work-section .project-meta {
+  max-width: none;
+  margin: 0 0 2.6rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.work-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.sushi-feature { display: block; width: 100%; height: auto; margin: 2.6rem 0 3rem; }
+.image-grid { display: grid; gap: 2rem; margin-top: 2.6rem; }
+.image-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.image-grid img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.reels { display: flex; gap: 1.6rem; width: 100%; margin-top: 2.4rem; margin-bottom: 4rem; padding-bottom: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.reels::-webkit-scrollbar { height: 4px; }
+.reels::-webkit-scrollbar-thumb { background: #287c46; }
+.reel { position: relative; flex: 0 0 80%; max-width: 300px; aspect-ratio: 9 / 16; overflow: hidden; background: #000; scroll-snap-align: start; }
+.reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+@media (max-width: 800px) {
+  .more-works { width: 100%; padding: 6rem 1.5rem 7rem; }
+  .page-title { margin-bottom: 2.6rem; font-size: 5rem; }
+  .work-section { margin-bottom: 8rem; }
+  .work-section h2 { font-size: 5rem; }
+  .sushi-feature { width: 100%; }
+  .image-grid--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

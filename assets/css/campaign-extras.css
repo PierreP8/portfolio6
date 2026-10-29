@@ -1,0 +1,50 @@
+/* Campaign-to-campaign navigation, matching Cargo's understated controls. */
+.campaign-pagination {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 3rem;
+  z-index: 11;
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  margin: 0;
+}
+.campaign-pagination a {
+  display: grid;
+  width: 4.8rem;
+  height: 4.8rem;
+  place-items: center;
+  color: rgba(0, 0, 0, .3);
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+.campaign-pagination a:hover { color: #287c46; transform: translateX(-.2rem); }
+.campaign-pagination a:last-child:hover { transform: translateX(.2rem); }
+.campaign-pagination svg { width: 3.6rem; height: 3.6rem; fill: none; stroke: currentColor; stroke-linecap: square; stroke-width: 1.5; }
+
+/* Same green play overlay used on the Mike's Hot Honey film. */
+.glass-overlay .custom-play-button > svg > path:first-child { fill: #287c46 !important; }
+.reel .glass-overlay,
+.video-container-916 .glass-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;
+  transition: opacity .35s ease, backdrop-filter .35s ease;
+}
+.reel:hover .glass-overlay,
+.video-container-916:hover .glass-overlay {
+  opacity: 0;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+}
+.reel:hover .custom-play-button,
+.video-container-916:hover .custom-play-button { transform: scale(1.08); }
+@media (max-width: 800px) {
+  .campaign-pagination { bottom: .6rem; left: 1rem; }
+}

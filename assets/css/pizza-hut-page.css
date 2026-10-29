@@ -1,0 +1,24 @@
+/* Typography measured from the original Cargo Pizza Hut page. */
+.pizza-hut {
+  padding-top: 8rem;
+}
+
+.pizza-hut h1 {
+  margin-bottom: 2rem;
+  font-size: 8rem;
+  /* Let the title use the space between its column and the image. */
+  width: calc(100% + 9rem);
+}
+
+.pizza-hut .project-meta,
+.pizza-hut .project-intro,
+.pizza-hut .project-copy,
+.pizza-hut .activation h2,
+.pizza-hut .activation p {
+  font-family: "TeX Gyre Heros Condensed", Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .pizza-hut { padding-top: 8rem; }
+  .pizza-hut h1 { width: auto; margin-bottom: 2.6rem; font-size: 6.4rem; }
+}

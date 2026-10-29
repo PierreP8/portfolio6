@@ -1,0 +1,65 @@
+.ugg-project-grid { align-items: start; }
+.ugg-introduction .project-copy strong { color: #287c46; }
+
+/* Same project typography treatment as the Pizza Hut page. */
+.ugg-introduction .project-meta,
+.ugg-introduction .project-intro,
+.ugg-introduction .project-copy {
+  font-family: "TeX Gyre Heros Condensed", Arial, sans-serif;
+}
+
+.portrait-slider {
+  position: relative;
+  width: min(60%, 32rem);
+  margin: 0 auto 2.4rem;
+}
+.portrait-slider__viewport {
+  position: relative;
+  aspect-ratio: 320 / 571;
+  overflow: hidden;
+}
+.portrait-slider__track {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform .55s ease-in-out;
+  will-change: transform;
+}
+.portrait-slider__image {
+  display: block;
+  flex: 0 0 25%;
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.reels-carousel {
+  display: flex;
+  gap: 1.6rem;
+  width: 100%;
+  padding-bottom: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.reels-carousel::-webkit-scrollbar { height: 4px; }
+.reels-carousel::-webkit-scrollbar-thumb { background: #287c46; }
+.reel-item { flex: 0 0 80%; scroll-snap-align: start; }
+.video-container-916 { position: relative; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; background: #000; }
+.video-container-916 iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.ugg-reels-wide {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 5rem;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.ugg-reels-wide .reel-item { flex: none; }
+
+@media (max-width: 800px) {
+  .portrait-slider { width: min(75%, 32rem); }
+  .ugg-reels-wide { display: flex; margin-top: 4rem; overflow-x: auto; scroll-snap-type: x mandatory; }
+  .ugg-reels-wide .reel-item { flex: 0 0 45%; }
+}

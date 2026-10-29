@@ -1,0 +1,27 @@
+body { background: #fff; }
+.about-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8rem;
+  min-height: 100vh;
+  padding: 7.5rem 4rem 11.2rem;
+}
+.about-main, .site-nav, .site-footer { font-family: "TeX Gyre Heros Condensed", Arial, sans-serif; }
+.about-profile h1 { margin: 0 0 4rem; color: #287c46; font-size: 8rem; font-weight: 400; line-height: 1; }
+.about-portrait-wrap { text-align: center; }
+.about-portrait { display: block; width: 60%; height: auto; margin: 0 auto; }
+.about-name { margin: 4rem 0 0; color: #287c46; font-size: 15px; font-weight: 700; letter-spacing: .05rem; }
+.about-copy { padding-top: .1rem; color: #111; }
+.about-copy h2 { margin: 0; color: #287c46; font-size: 18px; font-weight: 700; line-height: 1.3; }
+.about-location { margin: 0 0 2.4rem; color: #444; font-size: 15px; }
+.about-copy > p { margin: 0 0 2rem; font-size: 17px; line-height: 1.6; }
+.about-copy .about-scope { margin-top: 2.8rem; margin-bottom: 2.8rem; padding-top: 1.6rem; border-top: 1px solid rgba(40, 124, 70, .2); color: #444; font-size: 15px; line-height: 1.5; }
+.about-scope strong { color: #287c46; }
+.about-copy .about-contact { margin: 0; color: #287c46; font-size: 16px; font-weight: 700; text-align: right; }
+.about-contact a { color: #287c46; }
+.site-footer a.active { opacity: .35; }
+@media (max-width: 800px) {
+  .about-main { grid-template-columns: 1fr; gap: 5rem; padding: 6rem 1.5rem 7rem; }
+  .about-profile h1 { font-size: 5rem; }
+  .about-portrait { width: min(60%, 32rem); }
+}
